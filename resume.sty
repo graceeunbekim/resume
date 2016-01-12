@@ -1,0 +1,83 @@
+\usepackage[usenames]{color}
+\usepackage{fullpage,amsmath,amssymb,enumitem,multicol,xcolor}
+
+\textwidth=6.7in
+\topmargin=-.75in
+\textheight=11in
+
+\raggedright
+
+\thispagestyle{empty} 
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Definitions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+    \vspace{5pt}
+	\begin{changemargin}{-0.4in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+	\vspace{5pt}
+}
+
+\newcommand{\name}[5]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Huge \scshape {#1}}\\ \smallskip
+			{#2}\\ \smallskip 
+			{#3}\\ \smallskip
+		\end{center}
+	\end{changemargin}
+}
+
+\newcommand{\tab}[1]{\hspace{.05\textwidth}}
+
+\newenvironment{body} {
+	\vspace*{-9pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+
+\newenvironment{position} {
+	\vspace*{-4pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}
+
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\ 
+	#4\\
+}
+
+\title{Resume Template}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CREDITS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Made by Tsion Behailu (www.tsion.me) & Vania Speedy (www.http://ivansmirnov.name/)
